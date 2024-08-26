@@ -1,0 +1,60 @@
+ssignment 1: Online Shopping Simulation
+Task 1: Conditional Statement for User Login
+let isLoggedIn = true; // or false if not logged in
+
+if (isLoggedIn) {
+    console.log("You can add items to your cart.");
+} else {
+    console.log("Please log in to add items to your cart.");
+}
+
+Task 2: Display Products and Add to Cart Using a Loop
+let products = ["Laptop", "Smartphone", "Headphones"];
+let cart = [];
+
+for (let i = 0; i < products.length; i++) {
+    console.log((i + 1) + ". " + products[i]);
+}
+
+// Simulate adding the first product to the cart
+let productIndex = 0; // assuming user selects the first product
+if (isLoggedIn) {
+    cart.push(products[productIndex]);
+    console.log(products[productIndex] + " added to your cart.");
+}
+
+Task 3: Calculate Total Cost
+let prices = [1000, 800, 200]; // corresponding prices for products
+
+let totalCost = 0;
+for (let i = 0; i < cart.length; i++) {
+    totalCost += prices[i]; // this assumes that the cart and prices arrays align
+}
+console.log("Total cost: $" + totalCost);
+
+Assignment 2: Simple Banking System
+Task 1: Deposit Function
+let balance = 500; // initial balance
+
+function deposit(amount) {
+    balance += amount;
+    console.log("Deposited: $" + amount);
+}
+deposit(100); // testing deposit
+
+Task 2: Withdrawal Function
+function withdraw(amount) {
+    if (amount <= balance) {
+        balance -= amount;
+        console.log("Withdrawn: $" + amount);
+    } else {
+        console.log("Insufficient balance.");
+    }
+}
+withdraw(200); // testing withdrawal
+
+Task 3: Balance Inquiry Function
+function checkBalance() {
+    console.log("Current balance: $" + balance);
+}
+checkBalance(); // testing balance inquiry
